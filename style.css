@@ -54,8 +54,18 @@ a {
 }
 
 ul {
-  list-style: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -68,7 +78,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-medium);
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -120,4 +130,34 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-white);
+}
+
+/* Home */
+.home {
+  /* height: 1440px; */
+  background: url(imgs/home-background.png) center/cover no-repeat;
+  padding: 40px;
+  text-align: center; /* 중간정렬 */
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-purple-two);
+}
+
+.home__contact {
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-purple-two);
+  border-radius: var(--size-border-radius);
+  color: var(--color-purple-two);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
 }
