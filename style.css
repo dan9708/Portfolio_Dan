@@ -1,5 +1,5 @@
 /* Global */
-
+/* 전역으로 사용할 것들 */
 :root {
   /* Color */
   --color-white: #ffffff;
@@ -78,7 +78,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -134,7 +134,6 @@ p {
 
 /* Home */
 .home {
-  /* height: 1440px; */
   background: url(imgs/home-background.png) center/cover no-repeat;
   padding: 40px;
   text-align: center; /* 중간정렬 */
@@ -153,11 +152,153 @@ p {
 }
 
 .home__contact {
-  margin: 24px;
+  margin-top: 24px;
   padding: 8px 12px;
   border: 2px solid var(--color-purple-two);
   border-radius: var(--size-border-radius);
   color: var(--color-purple-two);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+}
+
+/* Section common */
+.section {
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+}
+
+/* 너비를 원하는 곳에 지정 */
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about__list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.about__list__item {
+  width: 300px;
+}
+
+.about__list__Interval {
+  margin-bottom: 40px;
+}
+.about__list__item > div {
+  position: relative;
+}
+
+.about__list__item > div > i {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 30px;
+}
+
+/* About에서 제목에 해당하는 부분을 설정 */
+.about__list__item > .email > b,
+.about__list__item > .about__list__common > b {
+  text-align: center;
+  font-size: var(--font-regular);
+}
+
+/* About에서 내용에 해당하는 부분을 설정 */
+.about__list__item > .email > b > span,
+.about__list__item > .about__list__common > b > span {
+  font-size: var(--font-small);
+  font-weight: var(--weight-regular);
+}
+
+/* email */
+.about__list__item > .email {
+  padding-left: 30px;
+}
+
+/* 이름, 생년월일, 주소지, 연락처, 취미에 적용 */
+.about__list__common {
+  padding-left: 25px;
+}
+
+/* 이메일 아이콘 */
+.about__list__item > div > i.email__icon {
+  margin-left: -2px;
+}
+
+/* 취미 아이콘 */
+.about__list__item > div > i.hobby__icon {
+  margin-left: -9px;
+}
+
+/* Skill */
+.skills {
+  background-color: var(--color-blue);
+  margin-top: 40px;
+  /* About bottom에 마진을 줌 */
+}
+
+.section__container > h1 {
+  color: var(--color-purple-two);
+}
+
+.skillset {
+  display: flex;
+  margin: 60px 0 40px;
+  /* 프론트엔드 박스와 버전관리 박스의 위아래로 마진을 줌 */
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  padding: 30px;
+  margin-right: 120px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+}
+
+.skillset__left > h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  color: var(--color-purple-two);
+  /* border: 1px solid red; */
+}
+
+.skillset__right {
+  flex-basis: 30%;
+  padding: 30px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+}
+
+.skillset__right > h2 {
+  margin-bottom: -2px;
+  font-size: 32px;
+  color: var(--color-purple-two);
+  /* border: 1px solid red; */
+}
+
+/* Projects */
+
+/* contact */
+.contact {
+  background-color: var(--color-blue);
+}
+
+.contact__links {
+  margin-bottom: 20px;
+  font-size: var(--font-large);
+}
+.contact__links > a > i {
+  color: var(--color-black);
+}
+
+.contact__links > a > img {
+  margin-left: 20px;
+  width: 46px;
+  height: 46px;
+  vertical-align: -5px;
 }
