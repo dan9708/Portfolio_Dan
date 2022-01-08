@@ -255,7 +255,7 @@ p {
 .skillset__left {
   flex-basis: 60%;
   padding: 30px;
-  margin-right: 120px;
+  margin-left: 35px;
   background-color: var(--color-white);
   border-radius: 20px;
 }
@@ -264,10 +264,10 @@ p {
   margin-bottom: 40px;
   font-size: 32px;
   color: var(--color-purple-two);
-  /* border: 1px solid red; */
 }
 
 .skillset__right {
+  margin-left: 50px;
   flex-basis: 30%;
   padding: 30px;
   background-color: var(--color-white);
@@ -282,6 +282,66 @@ p {
 }
 
 /* Projects */
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 위의 세줄 코드는 이미지 가운데 정렬  */
+  position: relative;
+  margin: 2px;
+  width: 280px;
+  height: 250px;
+  background-color: var(--color-blue);
+  border-radius: var(--size-border-radius);
+}
+
+.project__img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.project__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-blue);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all ease-in;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
+.project__description > h3,
+p {
+  /* color: var(--color-white); */
+}
+.project__description h3:after {
+  display: block;
+  position: relative;
+  left: 50%;
+  content: "";
+  margin-left: -12px;
+  margin-top: 8px;
+  width: 25px;
+  height: 2px;
+  background-color: var(--color-black);
+}
 
 /* contact */
 .contact {
