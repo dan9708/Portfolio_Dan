@@ -3,7 +3,7 @@
 :root {
   /* Color */
   --color-white: #ffffff;
-  --color-light-white: #eeeeee;
+  --color-light-white: #f8f8f8;
   --color-dark-white: #bdbdbd;
   /* --color-purple-one: #5a54e0; */
   --color-purple-two: #6447e2;
@@ -15,7 +15,7 @@
   --color-grey: #616161;
   --color-light-grey: #7c7979;
   --color-blue: #e1f5fe;
-  --color-dark-blue: #b7e4fa;
+  --color-dark-blue: #ceeaf8;
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
@@ -34,6 +34,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Annimation */
+  --animation-duration: 300ms;
 }
 
 /* Universal tags */
@@ -126,10 +129,23 @@ p {
 
 .navbar__menu__item.active {
   border: 2px solid var(--color-purple-two);
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-dark-blue);
+  /* light-white or dark-blue이냐 결정하자 */
+  border-radius: var(--size-border-radius);
+}
+
+/* navbar Toggle button */
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-purple-two);
 }
 
 /* Home */
@@ -246,6 +262,10 @@ p {
   color: var(--color-purple-two);
 }
 
+.section__container > p {
+  color: var(--color-black);
+}
+
 .skillset {
   display: flex;
   margin: 60px 0 40px;
@@ -261,7 +281,7 @@ p {
 }
 
 .skillset__left > h2 {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   font-size: 32px;
   color: var(--color-purple-two);
 }
@@ -275,7 +295,7 @@ p {
 }
 
 .skillset__right > h2 {
-  margin-bottom: -2px;
+  margin-bottom: 20px;
   font-size: 32px;
   color: var(--color-purple-two);
   /* border: 1px solid red; */
@@ -286,6 +306,11 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.works__projects.section__container {
+  padding: 50px 0 100px;
+  /* Projects의 위아래 여백 */
 }
 
 .project {
@@ -316,21 +341,23 @@ p {
   width: 100%;
   height: 100%;
   border-radius: var(--size-border-radius);
-  background-color: var(--color-blue);
+  background-color: var(--color-black);
   opacity: 0;
   transform: translateY(10px);
-  transition: all ease-in;
+  transition: all var(--animation-duration) ease-in;
+  /* animation-duration: ; */
 }
 
 .project:hover .project__description {
-  opacity: 0.8;
+  opacity: 0.5;
   transform: translateY(0px);
 }
 
-.project__description > h3,
+.project__description h3,
 p {
-  /* color: var(--color-white); */
+  color: white;
 }
+
 .project__description h3:after {
   display: block;
   position: relative;
@@ -340,7 +367,7 @@ p {
   margin-top: 8px;
   width: 25px;
   height: 2px;
-  background-color: var(--color-black);
+  background-color: var(--color-white);
 }
 
 /* contact */
@@ -352,6 +379,7 @@ p {
   margin-bottom: 20px;
   font-size: var(--font-large);
 }
+
 .contact__links > a > i {
   color: var(--color-black);
 }
@@ -361,4 +389,84 @@ p {
   width: 46px;
   height: 46px;
   vertical-align: -5px;
+}
+
+.contact__links > a > i:hover,
+.contact__links > a > img:hover {
+  transform: scale(1.1);
+}
+
+.contact__rights {
+  color: var(--color-black);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about__list {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    background-color: var(--color-blue);
+  }
+
+  .about__list__item {
+    width: 100%;
+  }
+
+  .about__list__item > div > i {
+    left: 60px;
+  }
+
+  .about__list__common {
+    margin-left: 80px;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+  .skillset__left {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .html__logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .skillset__right {
+    margin-left: 0px;
+  }
+
+  .git__logo__icon {
+    margin-left: -50px;
+    vertical-align: middle;
+    /* border: 1px solid red; */
+  }
+
+  .github__logo__icon {
+    /* margin-left: -50px; */
+    vertical-align: middle;
+    /* border: 1px solid red; */
+  }
+
+  .project {
+    flex-grow: 1;
+  }
 }
