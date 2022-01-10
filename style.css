@@ -324,8 +324,12 @@ p {
 
 .works__projects.section {
   padding: 50px 0 100px;
+  /* Projects의 위아래 여백 */
 }
-/* Projects의 위아래 여백 */
+
+.works__projects > h1 {
+  margin-bottom: 40px;
+}
 
 .project {
   display: flex;
@@ -469,10 +473,6 @@ p {
     background-color: var(--color-blue);
   }
 
-  .navbar.navbar--dark {
-    padding: 16px;
-  }
-
   .navbar__menu {
     flex-direction: column;
     display: none;
@@ -535,6 +535,10 @@ p {
     /* margin-left: -50px; */
     vertical-align: middle;
     /* border: 1px solid red; */
+  }
+
+  .works__projects.section {
+    padding: 25px 0 50px;
   }
 
   .project {
