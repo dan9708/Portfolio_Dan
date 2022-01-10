@@ -103,12 +103,21 @@ p {
 
 /* navbar */
 .navbar {
+  position: fixed;
+  padding: 16px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-blue);
+  background-color: transparent;
   align-items: center;
   color: var(--color-purple-two);
-  padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+/* navbar--dark (main.js에서 동작하는 기능 스타일) */
+.navbar.navbar--dark {
+  padding: 8px;
+  background-color: var(--color-blue);
 }
 
 .navbar__logo {
@@ -152,6 +161,7 @@ p {
 .home {
   background: url(imgs/home-background.png) center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center; /* 중간정렬 */
 }
 
@@ -308,10 +318,10 @@ p {
   justify-content: center;
 }
 
-.works__projects.section__container {
+.works__projects.section {
   padding: 50px 0 100px;
-  /* Projects의 위아래 여백 */
 }
+/* Projects의 위아래 여백 */
 
 .project {
   display: flex;
@@ -400,6 +410,7 @@ p {
   color: var(--color-black);
 }
 
+/* Responsive */
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
