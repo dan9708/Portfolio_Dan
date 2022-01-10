@@ -24,10 +24,23 @@ navbarMenu.addEventListener ('click', (event) => {
     return
   }
 
-  // console.log(event.target.dataset.link)
-  // const scrollTo = document.querySelector(link)
-  // scrollTo.scrollIntoView({behavior: 'smooth'})
-  scrollIntoView(link)
+  navbarMenu.classList.remove('open')
+  
+  // scrollIntoView(link)
+  const scrollMove = document.querySelector(link);
+    scrollMove.scrollIntoView({behavior: "smooth"});
+  const top = scrollMove.offsetTop - navbarHeight < 0 ? 0 : scrollMove.offsetTop - navbarHeight;  // top - navbarHeight < 0 일 때 0으로 입력.
+  window.scrollTo({
+      top:top,
+      left:0,
+      behavior: 'smooth'
+  });
+})
+
+// navbarToggleBtn
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn')
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open')
 })
 
 // contact me 버튼 클릭시 contact로 위치 이동
@@ -63,3 +76,13 @@ function scrollIntoView (selector) {
   const scrollTo = document.querySelector(selector)
   scrollTo.scrollIntoView({behavior: 'smooth'})
 }
+
+function getPosY(element) {
+  let posY = element.offsetTop;
+  if(element.offsetParent){
+    posY += element.offsetParent.offsetTop;
+  } 
+  return posY;
+}
+
+

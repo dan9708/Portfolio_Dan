@@ -111,13 +111,14 @@ p {
   background-color: transparent;
   align-items: center;
   color: var(--color-purple-two);
+  /* background-color: var(--color-blue); */
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
 }
 
 /* navbar--dark (main.js에서 동작하는 기능 스타일) */
 .navbar.navbar--dark {
-  padding: 8px;
+  padding: 16px;
   background-color: var(--color-blue);
 }
 
@@ -134,18 +135,14 @@ p {
   padding: 8px 12px;
   margin: 0 4px;
   cursor: pointer;
-  border-radius: var(--size-border-radius);
-}
-
-.navbar__menu__item.active {
-  border: 2px solid var(--color-purple-two);
+  border: 2px solid transparent;
   border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
-  background-color: var(--color-dark-blue);
-  /* light-white or dark-blue이냐 결정하자 */
+  border-color: var(--color-purple-two);
   border-radius: var(--size-border-radius);
+  background-color: var(--color-dark-blue);
 }
 
 /* navbar Toggle button */
@@ -205,6 +202,7 @@ p {
   margin: auto;
 }
 
+/* about */
 .about__list {
   display: flex;
   justify-content: space-between;
@@ -283,6 +281,9 @@ p {
 
 .skillset {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-grow: 1;
   margin: 60px 0 40px;
   /* 프론트엔드 박스와 버전관리 박스의 위아래로 마진을 줌 */
 }
@@ -290,7 +291,6 @@ p {
 .skillset__left {
   flex-basis: 60%;
   padding: 30px;
-  margin-left: 35px;
   background-color: var(--color-white);
   border-radius: 20px;
 }
@@ -302,7 +302,6 @@ p {
 }
 
 .skillset__right {
-  margin-left: 50px;
   flex-basis: 30%;
   padding: 30px;
   background-color: var(--color-white);
@@ -422,7 +421,7 @@ p {
   bottom: 40px;
   width: 50px;
   height: 50px;
-  font-size: 40px;
+  font-size: 30px;
   border-radius: 50%;
   color: var(--color-white);
   background-color: var(--color-dark-blue);
@@ -437,14 +436,41 @@ p {
 }
 
 /* Responsive */
+
+@media screen and (max-width: 360px) {
+  .skillset__left {
+    width: 330px;
+  }
+
+  .react__logo {
+    margin-left: -10px;
+  }
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font size */
+    --font-large: 30px;
+    --font-medium: 18px;
+    --font-regular: 16px;
+    --font-small: 14px;
+    --font-micro: 12px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 25px;
+    right: 16px;
+    font-size: var(--font-medium);
   }
   .navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
+  }
+
+  .navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -452,6 +478,14 @@ p {
     display: none;
     width: 100%;
     text-align: center;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+
+  .section {
+    padding: 16px;
   }
 
   .about__list {
@@ -478,7 +512,7 @@ p {
     flex-direction: column;
   }
   .skillset__left {
-    margin-left: 0;
+    /* width: 330px; */
     margin-bottom: 30px;
   }
 
@@ -486,9 +520,9 @@ p {
     display: block;
     margin: 0 auto;
   }
-
-  .skillset__right {
-    margin-left: 0px;
+  .css__logo {
+    display: block;
+    margin: 0 auto;
   }
 
   .git__logo__icon {
@@ -505,5 +539,17 @@ p {
 
   .project {
     flex-grow: 1;
+  }
+
+  .contact .velog__icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: -5px;
+  }
+
+  .arrow-up {
+    font-size: var(--font-medium);
+    right: 20px;
+    bottom: 20px;
   }
 }
