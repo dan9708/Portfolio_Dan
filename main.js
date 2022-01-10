@@ -36,6 +36,15 @@ contactMeBtn.addEventListener('click', () => {
   scrollIntoView('.contact')
 })
 
+// 스크롤시 화면이 투명해지는 기능구현
+const home = document.querySelector('.home__container')
+const homeHeight = home.getBoundingClientRect().height
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight
+})
+
+
+// 정의한 함수
 function scrollIntoView (selector) {
   const scrollTo = document.querySelector(selector)
   scrollTo.scrollIntoView({behavior: 'smooth'})
