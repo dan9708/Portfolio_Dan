@@ -112,6 +112,7 @@ p {
   align-items: center;
   color: var(--color-purple-two);
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 /* navbar--dark (main.js에서 동작하는 기능 스타일) */
@@ -185,6 +186,10 @@ p {
   color: var(--color-purple-two);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+}
+.home__contact:hover {
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-dark-blue);
 }
 
 /* Section common */
