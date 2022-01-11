@@ -402,11 +402,17 @@ p {
   color: var(--color-black);
 }
 
-.contact__links > a > img {
+.contact__links > a > img.velog__icon {
   margin-left: 20px;
   width: 46px;
   height: 46px;
   vertical-align: -5px;
+}
+.contact__links > a > img.notion__icon {
+  margin-left: 20px;
+  width: 60px;
+  height: 60px;
+  vertical-align: -13px;
 }
 
 .contact__links > a > i:hover,
@@ -516,7 +522,6 @@ p {
     flex-direction: column;
   }
   .skillset__left {
-    /* width: 330px; */
     margin-bottom: 30px;
   }
 
@@ -532,13 +537,10 @@ p {
   .git__logo__icon {
     margin-left: -50px;
     vertical-align: middle;
-    /* border: 1px solid red; */
   }
 
   .github__logo__icon {
-    /* margin-left: -50px; */
     vertical-align: middle;
-    /* border: 1px solid red; */
   }
 
   .works__projects.section {
@@ -549,10 +551,20 @@ p {
     flex-grow: 1;
   }
 
-  .contact .velog__icon {
+  .contact__links > a > i,
+  .contact__links > a > img {
+    transition: all var(--animation-duration) ease-in;
+  }
+
+  .contact__links > a > img.velog__icon {
     width: 30px;
     height: 30px;
-    vertical-align: -5px;
+    vertical-align: -3px;
+  }
+  .contact__links > a > img.notion__icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: -9px;
   }
 
   .arrow-up {
