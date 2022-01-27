@@ -244,24 +244,14 @@ p {
   font-weight: var(--weight-regular);
 }
 
-/* email */
-.about__list__item > .email {
-  padding-left: 30px;
-}
-
-/* 이름, 생년월일, 주소지, 연락처, 취미에 적용 */
+/* 이름, 생년월일, 주소지, 연락처, 취미에 왼쪽여백 적용 */
 .about__list__common {
-  padding-left: 25px;
-}
-
-/* 이메일 아이콘 */
-.about__list__item > div > i.email__icon {
-  margin-left: -2px;
+  margin-left: 30px;
 }
 
 /* 취미 아이콘 */
 .about__list__item > div > i.hobby__icon {
-  margin-left: -9px;
+  margin-left: -8px;
 }
 
 /* Skill */
@@ -312,7 +302,6 @@ p {
   margin-bottom: 20px;
   font-size: 32px;
   color: var(--color-purple-two);
-  /* border: 1px solid red; */
 }
 
 /* Projects */
@@ -363,7 +352,6 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
-  /* animation-duration: ; */
 }
 
 .project:hover .project__description {
