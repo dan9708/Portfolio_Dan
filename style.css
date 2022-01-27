@@ -244,24 +244,14 @@ p {
   font-weight: var(--weight-regular);
 }
 
-/* email */
-.about__list__item > .email {
-  padding-left: 30px;
-}
-
-/* 이름, 생년월일, 주소지, 연락처, 취미에 적용 */
+/* 이름, 생년월일, 주소지, 연락처, 취미에 왼쪽여백 적용 */
 .about__list__common {
-  padding-left: 25px;
-}
-
-/* 이메일 아이콘 */
-.about__list__item > div > i.email__icon {
-  margin-left: -2px;
+  margin-left: 30px;
 }
 
 /* 취미 아이콘 */
 .about__list__item > div > i.hobby__icon {
-  margin-left: -9px;
+  margin-left: -8px;
 }
 
 /* Skill */
@@ -312,7 +302,6 @@ p {
   margin-bottom: 20px;
   font-size: 32px;
   color: var(--color-purple-two);
-  /* border: 1px solid red; */
 }
 
 /* Projects */
@@ -328,7 +317,7 @@ p {
 }
 
 .works__projects > h1 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .project {
@@ -363,7 +352,6 @@ p {
   opacity: 0;
   transform: translateY(10px);
   transition: all var(--animation-duration) ease-in;
-  /* animation-duration: ; */
 }
 
 .project:hover .project__description {
@@ -402,11 +390,16 @@ p {
   color: var(--color-black);
 }
 
-.contact__links > a > img {
-  margin-left: 20px;
+.contact__links > a > img.velog__icon {
   width: 46px;
   height: 46px;
   vertical-align: -5px;
+}
+.contact__links > a > img.notion__icon {
+  margin: 0 20px;
+  width: 58px;
+  height: 58px;
+  vertical-align: -11px;
 }
 
 .contact__links > a > i:hover,
@@ -473,6 +466,10 @@ p {
     background-color: var(--color-blue);
   }
 
+  .navbar.navbar--dark {
+    padding: 16px;
+  }
+
   .navbar__menu {
     flex-direction: column;
     display: none;
@@ -512,7 +509,6 @@ p {
     flex-direction: column;
   }
   .skillset__left {
-    /* width: 330px; */
     margin-bottom: 30px;
   }
 
@@ -528,13 +524,10 @@ p {
   .git__logo__icon {
     margin-left: -50px;
     vertical-align: middle;
-    /* border: 1px solid red; */
   }
 
   .github__logo__icon {
-    /* margin-left: -50px; */
     vertical-align: middle;
-    /* border: 1px solid red; */
   }
 
   .works__projects.section {
@@ -545,10 +538,20 @@ p {
     flex-grow: 1;
   }
 
-  .contact .velog__icon {
+  .contact__links > a > i,
+  .contact__links > a > img {
+    transition: all var(--animation-duration) ease-in;
+  }
+
+  .contact__links > a > img.velog__icon {
     width: 30px;
     height: 30px;
-    vertical-align: -5px;
+    vertical-align: -3px;
+  }
+  .contact__links > a > img.notion__icon {
+    width: 38px;
+    height: 38px;
+    vertical-align: -7px;
   }
 
   .arrow-up {
