@@ -3,21 +3,9 @@
 :root {
   /* Color */
   --color-white: #ffffff;
-  --color-light-white: #f8f8f8;
-  --color-dark-white: #bdbdbd;
-  /* --color-purple-one: #5a54e0; */
   --color-purple-two: #6447e2;
-  /* --color-purple-three: #792de7; */
-
-  /* --color-pink: #fe918d;
-  --color-dark-pink: #ff6863; */
-  --color-dark-grey: #4d4d4d;
-  --color-grey: #616161;
-  --color-light-grey: #7c7979;
   --color-blue: #e1f5fe;
   --color-dark-blue: #ceeaf8;
-  --color-yellow: #fff7d1;
-  --color-orange: #feb546;
   --color-black: #000000;
 
   /* Font size */
@@ -327,7 +315,7 @@ p {
   /* 위의 세줄 코드는 이미지 가운데 정렬  */
   position: relative;
   margin: 2px;
-  width: 280px;
+  width: 300px;
   height: 250px;
   background-color: var(--color-blue);
   border-radius: var(--size-border-radius);
@@ -335,7 +323,8 @@ p {
 
 .project__img {
   max-width: 100%;
-  min-width: 100%;
+  min-width: 30%;
+  max-height: 100%;
 }
 
 .project__description {
