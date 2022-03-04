@@ -327,7 +327,7 @@ p {
   /* 위의 세줄 코드는 이미지 가운데 정렬  */
   position: relative;
   margin: 2px;
-  width: 280px;
+  width: 300px;
   height: 250px;
   background-color: var(--color-blue);
   border-radius: var(--size-border-radius);
@@ -335,7 +335,8 @@ p {
 
 .project__img {
   max-width: 100%;
-  min-width: 100%;
+  min-width: 30%;
+  max-height: 100%;
 }
 
 .project__description {
